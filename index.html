@@ -33,8 +33,15 @@
 	.margen{
 	  margin: 5px;
 	}
+		
 	.ocultar{
 		display: none;
+	}
+	.title_alert {
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: -25px;
+		color: red;
 	}
 </style>
 
@@ -55,22 +62,28 @@
 					BACKOFFICE
 				</button>
 			</div>
-			
+
 			<div class="margen">
-				<button class="btn-show-contact100">
-					REGISTRAR <br> USUARIO
+				<button class="btn-show-contact100 btn_consultar_amigos">
+					CONSULTAR <br> AMIGOS
 				</button>
-			</div>
-			
+			</div>			
+					
 			<div class="margen">
-				<button class="btn-show-contact100">
-					REGISTRAR <br> CONTACTO
+				<button class="btn-show-contact100 btn_registrar_amigo">
+					REGISTRAR <br> AMIGO
 				</button>
 			</div>
 						
 			<div class="margen">
 				<button class="btn-show-contact100">
-					REGISTRAR <br> PRESTAMO
+					SOLICITAR <br> PRESTAMO
+				</button>
+			</div>
+			
+			<div class="margen">
+				<button class="btn-show-contact100">
+					CONSULTAR <br> PRESTAMOS
 				</button>
 			</div>
 			
@@ -79,17 +92,65 @@
 	
 	<div class="container-contact100">
 	
-		<div class="wrap-contact100 ocultar" id="container_cliente">
+		
+		<div class="wrap-contact100 ocultar" id="container_usuario">
+			
+			<div class="contact100-form-title" style="background-image: url(images/bg-02.jpg);">
+				<span>REGISTRAR USUARIO</span>
+			</div>
+
+			<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input id="name" class="input100" type="text" name="fechaInicio" placeholder="Nombre">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-text-format m-b-2"></span>
+					</label>
+				</div>
+				
+				<div class="wrap-input100 validate-input">
+					<input id="pass" class="input100" type="text" name="fechaFin" placeholder="Usuario">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="pass">
+						<span class="lnr lnr-user m-b-5"></span>
+					</label>
+				</div>
+				
+				<div class="wrap-input100 validate-input">
+					<input id="pass" class="input100" type="password" name="fechaFin" placeholder="Contraseña">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="pass">
+						<span class="lnr lnr-lock m-b-5"></span>
+					</label>
+				</div>
+				
+				<div class="wrap-input100 validate-input">
+					<input id="pass" class="input100" type="text" name="fechaFin" placeholder="Tipo de Usuario">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="pass">
+						<span class="lnr lnr-lock m-b-5"></span>
+					</label>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						REGISTRAR
+					</button>
+				</div>
+			</form>
+		</div>
+		
+		<div class="wrap-contact100 ocultar" id="container_registrar_amigo">
 		
 			<button class="btn-hide-contact100">
 				<i class="zmdi zmdi-close"></i>
 			</button>
 			
 			<div class="contact100-form-title" style="background-image: url(images/bg-02.jpg);">
-				<span>REGISTRAR CLIENTE</span>
+				<span>REGISTRAR AMIGO</span>
 			</div>
 
-			<form class="contact100-form validate-form">
+			<form class="contact100-form form_registrar_amigo">
 				<div class="wrap-input100 validate-input">
 					<input id="name" class="input100" type="text" name="fechaInicio" placeholder="Nombre">
 					<span class="focus-input100"></span>
@@ -148,68 +209,48 @@
 
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
-						REGISTRAR
+						GUARDAR
 					</button>
 				</div>
 			</form>
 		</div>
+				
+		<div class="wrap-contact100 wrap-contact100_table ocultar" id="container_consultar_amigos">
 		
-		<div class="wrap-contact100 ocultar" id="container_usuario">
+			<button class="btn-hide-contact100 top-close">
+				<i class="zmdi zmdi-close"></i>
+			</button>
 			
 			<div class="contact100-form-title" style="background-image: url(images/bg-02.jpg);">
-				<span>REGISTRAR USUARIO</span>
+				<span>MIS AMIGOS</span>				
+				<button class="btn-hide-contact100">
+					<i class="zmdi zmdi-close"></i>
+				</button>
 			</div>
-
-			<form class="contact100-form validate-form">
-				<div class="wrap-input100 validate-input">
-					<input id="name" class="input100" type="text" name="fechaInicio" placeholder="Nombre">
-					<span class="focus-input100"></span>
-					<label class="label-input100" for="name">
-						<span class="lnr lnr-text-format m-b-2"></span>
-					</label>
-				</div>
-				
-				<div class="wrap-input100 validate-input">
-					<input id="pass" class="input100" type="text" name="fechaFin" placeholder="Usuario">
-					<span class="focus-input100"></span>
-					<label class="label-input100" for="pass">
-						<span class="lnr lnr-user m-b-5"></span>
-					</label>
-				</div>
-				
-				<div class="wrap-input100 validate-input">
-					<input id="pass" class="input100" type="password" name="fechaFin" placeholder="Contraseña">
-					<span class="focus-input100"></span>
-					<label class="label-input100" for="pass">
-						<span class="lnr lnr-lock m-b-5"></span>
-					</label>
-				</div>
-				
-				<div class="wrap-input100 validate-input">
-					<input id="pass" class="input100" type="text" name="fechaFin" placeholder="Tipo de Usuario">
-					<span class="focus-input100"></span>
-					<label class="label-input100" for="pass">
-						<span class="lnr lnr-lock m-b-5"></span>
-					</label>
-				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						REGISTRAR
-					</button>
-				</div>
-			</form>
+			
+			<div class="title_alert"></div>
+			
+			<table class="table table-hover" id="tb_amigos"></table>
+			
 		</div>
-		
+			
 		<div class="wrap-contact100 ocultar" id="container_backoffice">
+		
+			<button class="btn-hide-contact100 top-close">
+				<i class="zmdi zmdi-close"></i>
+			</button>
 			
 			<div class="contact100-form-title" style="background-image: url(images/bg-02.jpg);">
-				<span>BACKOFFICE</span>
+				<span>BACKOFFICE</span>				
+				<button class="btn-hide-contact100">
+					<i class="zmdi zmdi-close"></i>
+				</button>
+								
 			</div>
 
 			<form class="contact100-form form_backoffice">
 				<div class="wrap-input100 validate-input">
-					<input id="name" class="input100" type="text" name="fechaInicio" placeholder="Fecha Inicio">
+					<input id="fechaInicio" class="input100" type="text" name="fechaInicio" placeholder="Fecha Inicio">
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="name">
 						<span class="lnr lnr-calendar-full m-b-2"></span>
@@ -235,21 +276,23 @@
 		<div class="wrap-contact100" id="container_login">
 			
 			<div class="contact100-form-title" style="background-image: url(images/bg-02.jpg);">
-				<span>LOGIN</span>
+				<span>LOGIN</span>				
 			</div>
+			
+			<div class="title_alert"></div>
 
 			<form class="contact100-form form_login">
+				
 				<div class="wrap-input100 validate-input">
-					<input id="name" autocomplete="off" class="input100" type="text" name="name" placeholder="Usuario">
+					<input id="usuario" autocomplete="off" class="input100" type="text" name="usuario" placeholder="Usuario" value="lafm">
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="name">
 						<span class="lnr lnr-user m-b-2"></span>
 					</label>
 				</div>
 
-
 				<div class="wrap-input100 validate-input">
-					<input id="pass" autocomplete="off" class="input100" type="password" name="password" placeholder="Contraseña">
+					<input id="contrasenia" autocomplete="off" class="input100" type="password" name="contrasenia" placeholder="Contraseña" value="admin">
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="pass">
 						<span class="lnr lnr-lock m-b-5"></span>
@@ -258,6 +301,7 @@
 
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
+						<i id="loading" class="fa fa-spinner fa-spin margen" style="display:none"></i>
 						LOGIN
 					</button>
 				</div>
@@ -282,10 +326,12 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+<!--===============================================================================================-->
+	<script src="js/jquery.dataTables.min.js"></script>
+
 	
-	<script>
-			
-	</script>
+	
+	
 
 	
 </body>

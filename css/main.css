@@ -230,6 +230,14 @@ iframe {
   margin-top: 40px;
 }
 
+.wrap-contact100_table.wrap-contact100 {
+  width: 700px;
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  margin-top: 40px;
+}
+
 /*==================================================================
 [ Title form ]*/
 .contact100-form-title {
@@ -599,7 +607,8 @@ textarea.input100 {
   opacity: 0.6;
   position: absolute;
   right: 0;
-  top: -44px;
+  top: -0px;
+  margin-right: 5px;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -610,3 +619,11 @@ textarea.input100 {
 .btn-hide-contact100:hover {
   opacity: 1;
 }
+
+/*//////////////////////////////////////////////////////////////////
+[ Button show / hide ]*/
+
+
+
+
+
